@@ -6,7 +6,72 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>Hola Coders!</h1>
+  <h1 id="titulo">Hola Coders!</h1>
+  <h2 class="saludo">Hola Coders!</h2>
+  <div class="saludo">Hola Coders!</div>
+
+  <script>
+    // Declaro la variable global
+    var saludo = 'Hola Coders!';
+
+    // Los const no son Reasignables pero si son mutables (Inmutabilidad)
+    const objeto = {
+      name: 'Juan',
+      lastName: 'Perez',
+    }
+    console.log(objeto);
+    objeto.name = 'Pedro';
+    console.log(objeto);
+
+    // Declaro la Funcion saludarCoders.
+    function saludarCoders() {
+      // Declaro la variable con scope de función saludar.
+      let saludar = "Hola a todos!";
+      console.log(saludar);
+    }
+
+    // Si la arrow la escribo en una sola linea puedo evitar el return y las llaves 
+    // Implicitamente va a retornar lo que tenga luego de la flecha.
+    const saludarCoders2 = () => "Hola Desde el Arrow Function!";
+
+    /* Expresion equivalente
+    const saludarCoders2 = () => {
+      return "Hola Desde el Arrow Function";
+    } 
+    */
+
+    /* Expresion equivalente
+    function saludarCoders2() {
+      return "Hola Desde el Arrow Function";
+    } 
+    */
+
+    // Ejecuto la función saludarCoders.
+    saludarCoders();
+    let saludo2 = saludarCoders2();
+    console.log(saludarCoders2());
+
+    // Ejecuta la función interna luego de pasado el tiempo indicado en milisegundos.
+    // Recibe como parámetros una función y un tiempo en milisegundos:
+    //   setTimeout(function, time);
+    setTimeout(() => {
+      console.log(saludo);
+    }, 3000);
+
+    // Puedo capturar eventos llamando a la función cuando un evento ocurre en el DOM/Window.
+    // Me sirve para reaccionar a esos eventos de formas personalizadas.
+    const capturarEvento = (event) => {
+      event.preventDefault();
+    }
+
+    // Puedo acceder a elementos del DOM.
+    const tituloElement = document.getElementById('titulo');
+    console.log(tituloElement);
+
+    const saludoElements = document.getElementsByClassName('saludo');
+    console.log(saludoElements);
+  </script>
+  <script type="text/javascript" src="script.js"></script>
   <script type="text/javascript" src="index.js"></script>
 </body>
 </html>

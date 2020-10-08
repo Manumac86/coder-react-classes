@@ -26,3 +26,4 @@ class Persona extends Animal {
     console.log('Hey, vamo a correr!');
   }
 }
+console.log("Esto es el index.js");
