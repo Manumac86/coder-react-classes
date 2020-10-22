@@ -1,0 +1,24 @@
+.navBar {
+  color: white;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+
+  &_list {
+    display: flex;
+    list-style: none;
+
+    &_item {
+      margin: 0 30px;
+    }
+  }
+
+  &_cart_button {
+    background-color: green;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    width: 100px;
+  }
+}
